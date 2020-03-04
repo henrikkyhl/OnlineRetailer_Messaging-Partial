@@ -15,7 +15,8 @@ namespace OrderApi.Controllers
         IServiceGateway<Product> productServiceGateway;
         IMessagePublisher messagePublisher;
 
-        public OrdersController(IRepository<Order> repos, IServiceGateway<Product> gateway,
+        public OrdersController(IRepository<Order> repos,
+            IServiceGateway<Product> gateway,
             IMessagePublisher publisher)
         {
             repository = repos as IOrderRepository;
