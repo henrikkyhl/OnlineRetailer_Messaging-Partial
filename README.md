@@ -8,7 +8,7 @@ The solution is Docker enabled, and it contains the following two microservices:
 
 It is a partial solution to the Microservice Mini Project that you may complete or use as inspiration.
 
-Beware that all the models are implemented in a class library project called "SharedModels". You need to implement hidden models as well to achieve a "bounded context", and thus minimize the coupling between services. There are also other things that you need to do to satisfy all the requirements for the Microservice Mini Project.
+Beware that The OrderApi does not implement a hidden model. It uses only shared models defined in a class library project called "SharedModels". You need to implement hidden models as well to achieve a "bounded context", and thus minimize the coupling between services. There are also other things that you need to do to satisfy all the requirements for the Microservice Mini Project.
 
 You can run the solution using Docker or Kubernetes.
 
