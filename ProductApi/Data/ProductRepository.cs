@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using SharedModels;
+using ProductApi.Models;
 
 namespace ProductApi.Data
 {

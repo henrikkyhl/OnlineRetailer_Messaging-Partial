@@ -3,6 +3,7 @@ using System.Threading;
 using EasyNetQ;
 using Microsoft.Extensions.DependencyInjection;
 using ProductApi.Data;
+using ProductApi.Models;
 using SharedModels;
 
 namespace ProductApi.Infrastructure

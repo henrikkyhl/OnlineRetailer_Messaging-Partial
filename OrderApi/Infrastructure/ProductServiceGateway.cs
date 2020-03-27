@@ -4,7 +4,7 @@ using SharedModels;
 
 namespace OrderApi.Infrastructure
 {
-    public class ProductServiceGateway : IServiceGateway<Product>
+    public class ProductServiceGateway : IServiceGateway<ProductDto>
     {
         Uri productServiceBaseUrl;
 
@@ -13,13 +13,13 @@ namespace OrderApi.Infrastructure
             productServiceBaseUrl = baseUrl;
         }
 
-        public Product Get(int id)
+        public ProductDto Get(int id)
         {
             RestClient c = new RestClient();
             c.BaseUrl = productServiceBaseUrl;
 
             var request = new RestRequest(id.ToString(), Method.GET);
-            var response = c.Execute<Product>(request);
+            var response = c.Execute<ProductDto>(request);
             var orderedProduct = response.Data;
             return orderedProduct;
         }

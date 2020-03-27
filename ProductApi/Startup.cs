@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProductApi.Data;
 using ProductApi.Infrastructure;
+using ProductApi.Models;
 using SharedModels;
 
 namespace ProductApi
@@ -36,6 +37,10 @@ namespace ProductApi
 
             // Register database initializer for dependency injection
             services.AddTransient<IDbInitializer, DbInitializer>();
+
+            // Register ProductConverter for dependency injection
+            services.AddSingleton<IConverter<Product, ProductDto>, ProductConverter>();
+
 
             services.AddControllers();
         }
