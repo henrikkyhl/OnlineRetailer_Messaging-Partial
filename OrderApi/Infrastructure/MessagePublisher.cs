@@ -27,7 +27,7 @@ namespace OrderApi.Infrastructure
                 OrderLines = orderLines 
             };
 
-            bus.Publish(message, topic);
+            bus.PubSub.Publish(message, topic);
         }
 
     }

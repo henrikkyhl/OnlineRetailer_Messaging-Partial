@@ -26,7 +26,7 @@ namespace ProductApi.Infrastructure
         {
             using (var bus = RabbitHutch.CreateBus(connectionString))
             {
-                bus.Subscribe<OrderStatusChangedMessage>("productApiHkCompleted", 
+                bus.PubSub.Subscribe<OrderStatusChangedMessage>("productApiHkCompleted", 
                     HandleOrderCompleted, x => x.WithTopic("completed"));
 
                 // Add code to subscribe to other OrderStatusChanged events:
