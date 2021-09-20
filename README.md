@@ -1,6 +1,6 @@
 # OnlineRetailer_Messaging-Partial
 
-This solution demonstrates how to use messaging to implement choreography in microservices.
+This solution demonstrates how to use messaging in microservices.
 
 The solution is Docker enabled, and it contains the following two microservices:
 1) ProductApi
