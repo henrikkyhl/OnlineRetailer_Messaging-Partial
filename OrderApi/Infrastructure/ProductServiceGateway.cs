@@ -6,22 +6,21 @@ namespace OrderApi.Infrastructure
 {
     public class ProductServiceGateway : IServiceGateway<ProductDto>
     {
-        Uri productServiceBaseUrl;
+        string productServiceBaseUrl;
 
-        public ProductServiceGateway(Uri baseUrl)
+        public ProductServiceGateway(string baseUrl)
         {
             productServiceBaseUrl = baseUrl;
         }
 
         public ProductDto Get(int id)
         {
-            RestClient c = new RestClient();
-            c.BaseUrl = productServiceBaseUrl;
+            RestClient c = new RestClient(productServiceBaseUrl);
 
-            var request = new RestRequest(id.ToString(), Method.GET);
-            var response = c.Execute<ProductDto>(request);
-            var orderedProduct = response.Data;
-            return orderedProduct;
+            var request = new RestRequest(id.ToString());
+            var response = c.GetAsync<ProductDto>(request);
+            response.Wait();
+            return response.Result;
         }
     }
 }

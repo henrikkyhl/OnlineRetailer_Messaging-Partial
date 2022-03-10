@@ -17,12 +17,12 @@ namespace OrderApi
         // The product service (running as a container) listens on this URL for HTTP requests
         // from other services specified in the docker compose file (which in this solution is
         // the order service).
-        Uri productServiceBaseUrl = new Uri("http://productapi/products/");
+        string productServiceBaseUrl = "http://productapi/products/";
 
         // RabbitMQ connection string (I use CloudAMQP as a RabbitMQ server).
-        // Remember to replace this connectionstring with youur own.
+        // Remember to replace this connectionstring with your own.
         string cloudAMQPConnectionString =
-           "host=hare.rmq.cloudamqp.com;virtualHost=npaprqop;username=npaprqop;password=typeyourpasswordhere";
+           "host=hare.rmq.cloudamqp.com;virtualHost=npaprqop;username=npaprqop;password=type_password_here";
 
         public Startup(IConfiguration configuration)
         {
