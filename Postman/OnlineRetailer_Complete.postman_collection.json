@@ -2,7 +2,8 @@
 	"info": {
 		"_postman_id": "164c031e-7428-497d-9cf8-804007f244e6",
 		"name": "OnlineRetailer_Complete",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2647456"
 	},
 	"item": [
 		{
@@ -11,12 +12,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:32769/products",
+					"raw": "https://localhost:5443/products",
 					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "32769",
+					"port": "5443",
 					"path": [
 						"products"
 					]
@@ -30,12 +31,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:32769/products/1",
+					"raw": "https://localhost:5443/products/1",
 					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "32769",
+					"port": "5443",
 					"path": [
 						"products",
 						"1"
@@ -59,12 +60,12 @@
 					"raw": "{\n    \"name\": \"Wrench\",\n    \"price\": 100,\n    \"itemsInStock\": 5,\n    \"itemsReserved\": 0\n}"
 				},
 				"url": {
-					"raw": "https://localhost:32769/products",
+					"raw": "https://localhost:5443/products",
 					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "32769",
+					"port": "5443",
 					"path": [
 						"products"
 					]
@@ -87,12 +88,12 @@
 					"raw": "{\n    \"id\": 3,\n    \"name\": \"Drill\",\n    \"price\": 500,\n    \"itemsInStock\": 5\n}"
 				},
 				"url": {
-					"raw": "https://localhost:32769/products/3",
+					"raw": "https://localhost:5443/products/3",
 					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "32769",
+					"port": "5443",
 					"path": [
 						"products",
 						"3"
@@ -107,12 +108,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:32769/products/1",
+					"raw": "https://localhost:5443/products/1",
 					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "32769",
+					"port": "5443",
 					"path": [
 						"products",
 						"1"
@@ -127,12 +128,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:32768/orders",
+					"raw": "https://localhost:8443/orders",
 					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "32768",
+					"port": "8443",
 					"path": [
 						"orders"
 					]
@@ -155,12 +156,12 @@
 					"raw": "{\n\t\"orderLines\":[{\"productId\":2,\"quantity\":1},{\"productId\":3,\"quantity\":1}]\n}\n"
 				},
 				"url": {
-					"raw": "https://localhost:32768/orders",
+					"raw": "https://localhost:8443/orders",
 					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "32768",
+					"port": "8443",
 					"path": [
 						"orders"
 					]
@@ -174,12 +175,12 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:31002/orders/2/ship",
+					"raw": "https://localhost:8443/orders/2/ship",
 					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "31002",
+					"port": "8443",
 					"path": [
 						"orders",
 						"2",
@@ -195,12 +196,12 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:32768/orders/2/cancel",
+					"raw": "https://localhost:8443/orders/2/cancel",
 					"protocol": "https",
 					"host": [
 						"localhost"
 					],
-					"port": "32768",
+					"port": "8443",
 					"path": [
 						"orders",
 						"2",
