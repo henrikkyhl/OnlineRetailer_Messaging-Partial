@@ -13,8 +13,8 @@ Beware that The OrderApi does not implement a hidden model. It uses only shared 
 You can run the solution using Docker or Kubernetes.
 
 To run the solution using Docker Compose, do the following:
-1) Open the Startup classes for ProductApi and OrderApi.
-2) In each of these Startup classes, modify the "cloudAMQPConnectionString" so that it connects to your own RabbitMQ Server.
+1) Open the Program classes for ProductApi and OrderApi.
+2) In each of these Program classes, modify the "cloudAMQPConnectionString" so that it connects to your own RabbitMQ Server.
 3) Build the solution in release mode.
 4) Open a command prompt and navigate to the folder of the solution.
 5) Run "docker-compose up -d"
