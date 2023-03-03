@@ -14,9 +14,14 @@ string productServiceBaseUrl = "http://productapi/products/";
 // RabbitMQ connection string (I use CloudAMQP as a RabbitMQ server).
 // Remember to replace this connectionstring with your own.
 string cloudAMQPConnectionString =
-   "host=hare.rmq.cloudamqp.com;virtualHost=npaprqop;username=npaprqop;password=put your password here";
+   "host=hare.rmq.cloudamqp.com;virtualHost=npaprqop;username=npaprqop;password=d8cUbVMUYopAKF42bwBWAbecadiRlJSp";
 
-// Add services to the container.
+// Use this connection string if you want to run RabbitMQ server as a container
+// (see docker-compose.yml)
+//string cloudAMQPConnectionString = "host=rabbitmq";
+
+
+// Register services for dependency injection.
 
 builder.Services.AddDbContext<OrderApiContext>(opt => opt.UseInMemoryDatabase("OrdersDb"));
 

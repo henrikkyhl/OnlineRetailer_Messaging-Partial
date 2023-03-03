@@ -13,3 +13,9 @@ services:
       context: .
       dockerfile: OrderApi/Dockerfile
 
+# Uncomment the following code, if you want to run RabbitMQ server
+# as a container:
+#  rabbitmq:
+#    image: rabbitmq:3-management
+#    ports:
+#    - "15673:15672"
